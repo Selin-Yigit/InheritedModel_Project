@@ -18,11 +18,18 @@ class ColorWidget extends StatelessWidget {
         break;
     }
 
-    final provider = AvailableColorWidget.of(context,color);
-    
+    final provider = AvailableColorWidget.of(context, color);
+
     return Container(
       height: 100,
-      color:  color==AvailableColors.one ? provider.color1 : provider.color2,
+      color: color == AvailableColors.one ? provider.color1 : provider.color2,
+      child: Center(
+        child: Text(
+          color == AvailableColors.one ? "Color1" : "Color2",
+          style:
+              const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
+        ),
+      ),
     );
   }
 }
