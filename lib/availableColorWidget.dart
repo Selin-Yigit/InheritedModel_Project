@@ -1,10 +1,11 @@
+import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:inheritedmodel_project/homePage.dart';
 import 'dart:developer' as devtools show log;
 
 class AvailableColorWidget extends InheritedModel<AvailableColors> {
-  final AvailableColors color1;
-  final AvailableColors color2;
+  final MaterialColor color1;
+  final MaterialColor color2;
 
   const AvailableColorWidget(
       {Key? key,
